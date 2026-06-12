@@ -1,0 +1,156 @@
+.profile-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Base Card Shell Structural Configs */
+.profile-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.identity-layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-large {
+  width: 72px;
+  height: 72px;
+  background-color: #e2e8f0;
+  color: #94a3b8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.identity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-display-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.unique-username {
+  color: #374151;
+  font-weight: 600;
+}
+
+.action-link-btn {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.action-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* 📊 Progress Meter Line Rules */
+.profile-completion-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.progress-track-bar {
+  flex: 1;
+  max-width: 320px;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill-level {
+  height: 100%;
+  background-color: #0f172a; /* Premium Dark Navy Slate Accent */
+  border-radius: 4px;
+}
+
+.completion-percentage-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* 📞 Contact Grid UI Definitions */
+.card-section-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.details-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.info-data-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.data-field-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+}
+
+.address-text-wrap {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.grid-action-link {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.grid-action-link:hover {
+  text-decoration: underline;
+}
+
+.text-whatsapp {
+  color: #2563eb;
+}

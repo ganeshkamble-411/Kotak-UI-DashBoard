@@ -1,22 +1,24 @@
-/* 🟥 Main Header Container Box */
+/* ==========================================================================
+   1. MAIN HEADER BASE CONTAINER
+   ========================================================================== */
 .kotak-header {
   height: 64px;
   background-color: #4c276a; /* Corporate Violet Accent */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   font-family: sans-serif;
   color: #ffffff;
   box-sizing: border-box;
   width: 100%;
 }
 
-/* ⬅️ Left Side Layout (Logo + Search Container) */
+/* --- Left Side Layout (Logo + Search Container) --- */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .logo-container {
@@ -38,14 +40,19 @@
   font-weight: 500;
 }
 
-/* Dynamic Input Search box elements */
+/* --- Dynamic Input Search Box --- */
 .search-container {
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 4px;
   padding: 6px 12px;
-  width: 260px;
+  width: 130px; /* Mobile first standard default width */
+  transition: width 0.2s ease-in-out;
+}
+
+.search-container:focus-within {
+  width: 160px; /* Mobile focus target width change scaling */
 }
 
 .search-icon {
@@ -67,14 +74,17 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ➡️ Right Side Layout (Actions + Profile Setup Zone) */
+
+/* ==========================================================================
+   2. RIGHT SIDE LAYOUT & PROFILE ZONE
+   ========================================================================== */
 .header-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-/* Accessible Accessibility Skip Button standard hidden flow */
+/* --- Accessibility Element --- */
 .skip-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -91,6 +101,7 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* --- Desktop Utility Items --- */
 .utility-links {
   display: flex;
   align-items: center;
@@ -108,9 +119,9 @@
   color: #ffffff;
 }
 
-/* 👤 User Interactive Anchor Anchor Wrapper Zone */
+/* --- Profile Action Area --- */
 .profile-section {
-  position: relative; /* Context tracking tag dropdown card placement anchor lock */
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -119,6 +130,7 @@
   border-radius: 20px;
   user-select: none;
   transition: background-color 0.1s;
+  cursor: pointer;
 }
 
 .profile-section:hover {
@@ -128,7 +140,7 @@
 .profile-avatar {
   width: 28px;
   height: 28px;
-  background-color: #22c55e; /* Premium avatar standard background tone */
+  background-color: #22c55e;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -142,25 +154,28 @@
   font-size: 13px;
   font-weight: 600;
   color: #ffffff;
+  display: none; /* Mobile first - hidden by default */
 }
 
-/* 📥 Floating Card Box Container Custom Mapping Setup (Exact Match) */
+
+/* ==========================================================================
+   3. PROFILE DROPDOWN CARD FLOW
+   ========================================================================== */
 .profile-dropdown-card {
   position: absolute;
-  top: 42px; /* Spaces drop box perfectly floating near layout anchor zone */
+  top: 45px;
   right: 0;
   width: 290px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Overrides charts layers stack depth completely */
+  z-index: 1000;
   padding: 1.25rem 0.5rem 0.75rem 0.5rem;
-  text-align: left; /* Essential tracking context reset overrides parent fonts header alignments */
-  cursor: default; /* Kills link pointer lines selection grids behaviors */
+  text-align: left;
+  cursor: default;
 }
 
-/* Dropdown notch pointer vector locator */
 .dropdown-notch-arrow {
   position: absolute;
   top: -6px;
@@ -255,6 +270,7 @@
   font-size: 11px;
 }
 
+/* --- Logout Segment CSS --- */
 .logout-action-row {
   display: flex;
   justify-content: flex-start;
@@ -273,4 +289,38 @@
 
 .logout-action-row:hover .logout-label-text {
   color: #ef4444;
+}
+
+
+/* ==========================================================================
+   4. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* 📱 Mobile and Small Screen Controls */
+@media (max-width: 768px) {
+  .skip-btn, 
+  .utility-links,
+  .brand-subtext {
+    display: none !important; /* Forces strict removal on responsive layouts */
+  }
+  
+  .brand-name {
+    font-size: 18px;
+  }
+}
+
+/* 💻 Medium Screens and Desktops */
+@media (min-width: 769px) {
+  .search-container {
+    width: 260px; /* Overwrites mobile structure width on desktop screens */
+  }
+
+  /* Fixed Desktop Focus POP Bug: overwrites mobile 180px tracking */
+  .search-container:focus-within {
+    width: 320px; 
+  }
+
+  .profile-status {
+    display: inline; /* Displays username validation info tag safely */
+  }
 }

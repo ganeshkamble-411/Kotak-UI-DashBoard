@@ -6,6 +6,7 @@ import { SummaryCardComponent } from './summary-card/summary-card.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { Transaction } from '../../models/transaction.model';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,12 +15,13 @@ import { Transaction } from '../../models/transaction.model';
     CommonModule, 
     HeaderComponent, 
     SidebarComponent, 
+    RouterOutlet,
     SummaryCardComponent, 
     TransactionsComponent, 
     WidgetsComponent
   ],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'] // 👈 Yeh line add ho gayi hai tumhari custom CSS file ke liye
+  styleUrls: ['./dashboard.component.css'] 
 })
 export class DashboardComponent {
   mockTransactions: Transaction[] = [

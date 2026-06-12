@@ -1,18 +1,16 @@
 /* Sidebar Parent Shell */
 .sidebar-container {
+  display: none; /* 📱 Mobile par Sidebar default me hidden rahega */
   width: 240px; 
   background-color: #ffffff;
   border-right: 1px solid #e5e7eb;
   height: calc(100vh - 64px);
   overflow-y: auto;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   user-select: none;
   box-sizing: border-box;
-  font-family: sans-serif;
-  -ms-overflow-style: none;  
-  scrollbar-width: none;
+  font-family: sans-serif
 }
 
 .sidebar-top {
@@ -145,3 +143,11 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+@media (min-width: 768px) {
+  .sidebar-container {
+    display: flex; /* Sidebar visible ho jayega */
+  }
+}
+
+

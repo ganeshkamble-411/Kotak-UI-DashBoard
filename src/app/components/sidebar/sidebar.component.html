@@ -31,6 +31,21 @@
         <span *ngIf="item.hasInfo" class="info-badge">ⓘ</span>
       </a>
     </nav>
+
+    <nav class="nav-group">
+  <a *ngFor="let item of servicesNav" 
+     [routerLink]="item.name === 'Profile' ? '/profile' : '/dashboard'"
+     routerLinkActive="active"
+     class="nav-link">
+    
+    <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" [attr.d]="item.iconPath"></path>
+    </svg>
+    
+    <span class="nav-text">{{ item.name }}</span>
+    <span *ngIf="item.hasInfo" class="info-badge">ⓘ</span>
+  </a>
+</nav>
   </div>
 
   <div class="sidebar-bottom">
