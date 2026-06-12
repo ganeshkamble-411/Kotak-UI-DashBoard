@@ -1,161 +1,276 @@
-/* Main Header Layout Frame */
+/* 🟥 Main Header Container Box */
 .kotak-header {
   height: 64px;
-  background-color: #4a154b; /* Kotak Corporate Purple/Maroon */
-  color: #ffffff;
+  background-color: #4c276a; /* Corporate Violet Accent */
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  padding: 0 1.5rem;
   font-family: sans-serif;
+  color: #ffffff;
   box-sizing: border-box;
+  width: 100%;
 }
 
-/* Left Side Layout: Logo and Search aligned horizontally */
+/* ⬅️ Left Side Layout (Logo + Search Container) */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 3rem; /* Spacing between logo and search bar */
-  flex: 1;
+  gap: 2rem;
 }
 
 .logo-container {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  white-space: nowrap;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .brand-name {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.05em;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: #ffffff;
 }
 
 .brand-subtext {
-  font-size: 11px;
-  color: #f87171;
-  font-weight: 700;
-  border-left: 1px solid #f87171;
-  padding-left: 0.5rem;
-  margin-left: 0.25rem;
+  font-size: 10px;
+  color: #d8b4fe;
+  font-weight: 500;
 }
 
-/* 🔍 Search Input Styling */
+/* Dynamic Input Search box elements */
 .search-container {
-  position: relative;
-  width: 100%;
-  max-width: 380px; /* Aligned according to screenshot layout */
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 6px 12px;
+  width: 260px;
 }
 
 .search-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: #9ca3af;
-  pointer-events: none;
+  font-size: 13px;
+  margin-right: 8px;
+  opacity: 0.8;
 }
 
 .search-input {
-  width: 100%;
-  height: 36px;
-  background-color: #ffffff;
-  color: #1f2937;
+  background: transparent;
+  border: none;
+  color: #ffffff;
   font-size: 13px;
-  padding-left: 36px;
-  padding-right: 16px;
-  border: 1px solid transparent;
-  border-radius: 6px;
+  width: 100%;
   outline: none;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
 }
 
-/* Interactive ring on input focus */
-.search-input:focus {
-  border-color: #e11d48; /* Red highlight on select */
-  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-/* Right Side Actions Layout */
+/* ➡️ Right Side Layout (Actions + Profile Setup Zone) */
 .header-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-/* Red Button */
+/* Accessible Accessibility Skip Button standard hidden flow */
 .skip-btn {
-  background-color: #e11d48;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   font-size: 11px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border: none;
+  padding: 4px 8px;
   border-radius: 4px;
   cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  display: inline-block;
 }
 
 .skip-btn:hover {
-  background-color: #be123c;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Center Utility Links */
 .utility-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  white-space: nowrap;
+  gap: 1.25rem;
 }
 
 .utility-item {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  color: #e5e7eb;
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
-  transition: color 0.15s ease;
 }
 
 .utility-item:hover {
   color: #ffffff;
 }
 
-/* Profile Section */
+/* 👤 User Interactive Anchor Anchor Wrapper Zone */
 .profile-section {
+  position: relative; /* Context tracking tag dropdown card placement anchor lock */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  border-left: 1px solid #6b21a8;
-  padding-left: 1rem;
-  white-space: nowrap;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 6px 14px 6px 8px;
+  border-radius: 20px;
+  user-select: none;
+  transition: background-color 0.1s;
+}
+
+.profile-section:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .profile-avatar {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  background-color: #22c55e; /* Premium avatar standard background tone */
   border-radius: 50%;
-  background-color: #d1d5db;
-  color: #1f2937;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 12px;
+  color: #ffffff;
 }
 
 .profile-status {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: #ffffff;
+}
+
+/* 📥 Floating Card Box Container Custom Mapping Setup (Exact Match) */
+.profile-dropdown-card {
+  position: absolute;
+  top: 42px; /* Spaces drop box perfectly floating near layout anchor zone */
+  right: 0;
+  width: 290px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Overrides charts layers stack depth completely */
+  padding: 1.25rem 0.5rem 0.75rem 0.5rem;
+  text-align: left; /* Essential tracking context reset overrides parent fonts header alignments */
+  cursor: default; /* Kills link pointer lines selection grids behaviors */
+}
+
+/* Dropdown notch pointer vector locator */
+.dropdown-notch-arrow {
+  position: absolute;
+  top: -6px;
+  right: 28px;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  border-left: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dropdown-user-identity {
+  display: flex;
+  gap: 12px;
+  padding: 0 0.75rem 0.75rem 0.75rem;
+  align-items: center;
+}
+
+.dropdown-avatar-circle {
+  width: 44px;
+  height: 44px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.user-meta-specs {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-full-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.user-crn-number {
+  font-size: 12px;
+  color: #64748b;
+  margin: 2px 0 4px 0;
+  font-weight: 500;
+}
+
+.profile-action-link {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.profile-action-link:hover {
+  text-decoration: underline;
+}
+
+.dropdown-divider {
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 4px 0;
+}
+
+.dropdown-row-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-row-action:hover {
+  background-color: #f8fafc;
+}
+
+.action-label-text {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.arrow-indicator-red {
+  color: #ef4444;
+  font-size: 11px;
+}
+
+.logout-action-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.logout-icon-vector {
+  font-size: 14px;
+}
+
+.logout-label-text {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.logout-action-row:hover .logout-label-text {
+  color: #ef4444;
 }
