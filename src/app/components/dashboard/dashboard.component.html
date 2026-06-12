@@ -1,0 +1,21 @@
+<div class="dashboard-shell">
+  <app-header></app-header>
+  
+  <div class="dashboard-body">
+    <app-sidebar></app-sidebar>
+    
+    <main class="dashboard-main-content">
+      
+      <div class="primary-flow-column">
+        <app-summary-card></app-summary-card>
+        <app-transactions [transactions]="mockTransactions"></app-transactions>
+      </div>
+
+      <div class="secondary-widgets-column">
+        <app-widgets></app-widgets>
+      </div>
+
+    </main>
+  </div>
+</div>
+

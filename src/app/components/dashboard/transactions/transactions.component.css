@@ -1,0 +1,153 @@
+
+.transactions-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+
+.account-badge {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+  background-color: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 1px solid #f3f4f6; 
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+}
+
+.transaction-row:last-child {
+  border-bottom: none; 
+}
+
+.transaction-row:hover {
+  background-color: #f9fafb; 
+}
+
+
+.tx-left-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 75%; 
+}
+
+
+.tx-type-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.icon-debit {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.icon-credit {
+  background-color: #f0fdf4;
+  color: #22c55e;
+}
+
+.tx-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.tx-description {
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+  letter-spacing: -0.01em;
+  word-break: break-word; 
+}
+
+.tx-date {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+
+.tx-right-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tx-amount {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.amt-debit {
+  color: #ef4444; 
+}
+
+.amt-credit {
+  color: #16a34a; 
+}
+
+
+.action-menu-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.1s ease;
+}
+
+.action-menu-btn:hover {
+  color: #4b5563;
+}
+ 

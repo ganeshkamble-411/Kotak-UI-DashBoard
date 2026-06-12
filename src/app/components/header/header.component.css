@@ -1,0 +1,161 @@
+/* Main Header Layout Frame */
+.kotak-header {
+  height: 64px;
+  background-color: #4a154b; /* Kotak Corporate Purple/Maroon */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* Left Side Layout: Logo and Search aligned horizontally */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Spacing between logo and search bar */
+  flex: 1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.brand-subtext {
+  font-size: 11px;
+  color: #f87171;
+  font-weight: 700;
+  border-left: 1px solid #f87171;
+  padding-left: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+/* 🔍 Search Input Styling */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 380px; /* Aligned according to screenshot layout */
+  margin-right: auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  height: 36px;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-size: 13px;
+  padding-left: 36px;
+  padding-right: 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Interactive ring on input focus */
+.search-input:focus {
+  border-color: #e11d48; /* Red highlight on select */
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.2);
+}
+
+/* Right Side Actions Layout */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Red Button */
+.skip-btn {
+  background-color: #e11d48;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.skip-btn:hover {
+  background-color: #be123c;
+}
+
+/* Center Utility Links */
+.utility-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.utility-item {
+  font-size: 11px;
+  font-weight: 500;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.utility-item:hover {
+  color: #ffffff;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-left: 1px solid #6b21a8;
+  padding-left: 1rem;
+  white-space: nowrap;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.profile-status {
+  font-size: 11px;
+  font-weight: 600;
+  color: #ffffff;
+}

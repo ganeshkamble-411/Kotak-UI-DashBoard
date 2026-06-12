@@ -1,0 +1,33 @@
+<div class="widgets-wrapper">
+  
+  <div class="survey-banner">
+    <div class="survey-content">
+      <p class="survey-text">Tell us how we can improve your Net Banking experience</p>
+      <span class="survey-link-text">Take Survey →</span>
+    </div>
+    <span class="survey-bg-icon">📊</span>
+  </div>
+
+  <div class="widget-card">
+    <div class="widget-card-header">
+      <span class="widget-card-title">Popular Service Request</span>
+      <span class="widget-see-all">See All</span>
+    </div>
+    
+    <div class="services-list">
+      <div *ngFor="let item of services" class="service-item">
+        <span class="service-title">📄 {{ item.title }}</span>
+        <span class="service-arrow">❯</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-card credit-score-widget">
+    <div class="credit-icon">📈</div>
+    <div class="credit-content">
+      <h4 class="credit-title">Check your credit score & unlock product recommendations</h4>
+      <span class="credit-link">Get free credit score</span>
+    </div>
+  </div>
+
+</div>
